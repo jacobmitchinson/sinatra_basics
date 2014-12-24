@@ -37,3 +37,11 @@ not_found do
   status 404
   'not found'
 end
+
+# classes can be represented as so:
+
+class HelloWorldApp < Sinatra:Base
+  get '/?:name?' do 
+    "Hello, #{params[:name] ? params[:name] : "world"}!"
+  end
+end
